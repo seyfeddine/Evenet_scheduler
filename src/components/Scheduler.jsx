@@ -34,6 +34,13 @@ const Scheduler = () => {
 
   const popupOpen = (args) => {
     if (args.type === "Editor" || args.type === "QuickInfo") {
+      console.log(args.data);
+      if (args.data.Subject) {
+        args.cancel = true;
+      }
+      // TODO: here is where you can get the data of the clicked cell
+
+      // TODO: ADD YOUR OWN POPUP LOGIC
       args.duration = 5;
     } else if (args.type === "DeleteAlert") {
       // TODO: add the logic to delete from API HERE
@@ -120,6 +127,7 @@ const Scheduler = () => {
     });
   }, []);
 
+  // TODO: HERE IS WHERE YOU CAN SET UP YOUR CUSTOM FORM FOR THE VALUES
   const editorTemplate = (props) => {
     return props !== undefined ? (
       <table
@@ -183,7 +191,7 @@ const Scheduler = () => {
                     dateFormat
                   );
 
-                  if (endTime.diff(endTime) <= 0) {
+                  if (endTime.diff(startTime) <= 0) {
                     // if the end time is before the start
                     startTime = endTime.add(-5, "minutes");
                     let newValue = startTime.format(dateFormat);
@@ -207,7 +215,12 @@ const Scheduler = () => {
   };
   const eventRendered = (props) => {
     if (props.data.CategoryColor !== null)
-      props.element.style.backgroundColor = "#CC4455";
+      props.element.style.backgroundColor = "#fee4e5";
+    props.element.style.color = "#9c5a68";
+  };
+
+  const renderCellFunc = (props) => {
+    props.element.style.height = "60px";
   };
 
   return (
@@ -238,6 +251,7 @@ const Scheduler = () => {
       quickInfoTemplatesContent={editorTemplate}
       eventRendered={eventRendered}
       popupOpen={popupOpen}
+      renderCell={renderCellFunc}
     >
       <ViewsDirective>
         <ViewDirective option="Day" />

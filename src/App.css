@@ -53,3 +53,120 @@
   flex-direction: row;
   padding: 5%;
 }
+
+.e-cell.e-selected > .e-day {
+  background-color: #00abfe !important;
+}
+
+.e-cell.e-today > .e-day {
+  border-color: #00abfe !important;
+  color: #00abfe !important;
+}
+
+.e-cell.e-today.e-selected > .e-day {
+  border-color: #00abfe !important;
+  color: white !important;
+}
+
+.e-btn.e-today.e-flat.e-primary.e-css {
+  color: #00abfe !important;
+}
+
+.e-btn.e-today.e-flat.e-primary.e-css:hover {
+  background-color: #00abfe22;
+}
+
+.e-btn.e-today.e-flat.e-primary.e-css:focus {
+  background-color: #00abfe44;
+}
+
+.e-btn.e-today.e-flat.e-primary.e-css:active {
+  background-color: #00abfe55;
+}
+
+.e-day.e-title {
+  /* border: 1px #00abfe solid; */
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: #f7f9f6;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 200ms;
+  color: #00abfe !important;
+}
+
+.e-day.e-title:hover {
+  border-radius: 10px;
+}
+.e-btn-icon.e-icon-day.e-icons.e-icon-left,
+.e-active-view .e-tbar-btn.e-tbtn-txt.e-control.e-btn.e-lib .e-tbar-btn-text,
+.e-btn-icon.e-icon-week.e-icons.e-icon-left {
+  color: #00abfe;
+}
+
+.e-toolbar-item.e-date-range.e-overflow-show,
+#e-tbr-btn_134,
+.e-toolbar-item.e-today.e-overflow-show {
+  display: none;
+}
+
+.e-header-cells.e-current-day .e-header-day,
+.e-header-cells.e-current-day .e-header-date.e-navigate {
+  color: #00abfe;
+}
+
+.e-active-view {
+  border: #f76033 solid 1px;
+  padding: 0;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  background-color: #f76033;
+}
+
+.e-active-view > button {
+  padding: 0;
+  margin: 0;
+  background-color: #f76033;
+}
+
+.e-active-view > button > span {
+  padding: 0;
+  margin: 0;
+  color: white !important;
+  background-color: #f76033;
+}
+
+#root
+  > div
+  > div.e-control.e-lib.e-schedule.e-keyboard
+  > div.e-schedule-toolbar-container
+  > div
+  > div
+  > div.e-toolbar-right
+  > div.e-toolbar-item.e-views.e-week.e-active-view,
+.e-active-view #e-tbr-btn_137,
+.e-active-view #e-tbr-btn_136 {
+  padding: 0;
+  margin: 0;
+  background-color: #f76033;
+}
+
+.e-toolbar-item.e-views.e-week.e-active-view {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.e-toolbar-item.e-views.e-day {
+  padding: 0px;
+}
+
+.e-appointment {
+  border-left: #9c5a68 4px solid !important;
+}
+
+.e-header-date {
+  font-family: Arial !important;
+  font-weight: 800 !important;
+}
+
+.e-header-day {
+  font-weight: 600 !important;
+}
